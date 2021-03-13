@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type person struct {
-	name string
-	age  int
+func main() {
+	i := 7
+	inc(&i)
+	fmt.Println(i)
 }
 
-func main() {
-	p := person{name: "Jake", age: 23}
-	fmt.Println(p.age)
+func inc(x *int) {
+	*x++
 }

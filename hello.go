@@ -5,18 +5,14 @@ import (
 )
 
 func main() {
+	vertices := make(map[string]int)
+	vertices["triangle"] = 2
+	vertices["square"] = 3
+	vertices["dodecagon"] = 1
 
-	//array of fixed size
-	var a [5]int
-	a[2] = 7
-	fmt.Println(a)
+	fmt.Println(vertices)
 
-	//shorthand
-	b := [5]int{5, 4, 3, 2, 1}
-	fmt.Println(b)
-
-	//dynamic array
-	c := []int{5, 4, 3}
-	c = append(c, 13)
-	fmt.Println(c)
+	//to delete any key
+	delete(vertices, "square")
+	fmt.Println(vertices)
 }

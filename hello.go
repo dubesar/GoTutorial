@@ -1,26 +1,29 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"math"
 )
 
 func main() {
-	for i := 0; i < 5; i++ {
-		fmt.Println(i)
+	result := sum(2, 3)
+	fmt.Println(result)
+	res, err := sqrt(-16)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(res)
 	}
+}
 
-	//while loops
-	i := 0
-	for i < 5 {
-		fmt.Println(i)
-		i++
+func sum(x int, y int) int {
+	return x + y
+}
+
+func sqrt(x float64) (float64, error) {
+	if x < 0 {
+		return 0, errors.New("Undefined for negative numbers")
 	}
-
-	//looping arrays
-	arr := []string{"a", "b", "c"}
-	for index, value := range arr {
-		fmt.Println("index", index, "value", value)
-	}
-
-	//same goes for map just replace index with key
+	return math.Sqrt(x), nil
 }

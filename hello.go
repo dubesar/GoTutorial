@@ -5,14 +5,22 @@ import (
 )
 
 func main() {
-	vertices := make(map[string]int)
-	vertices["triangle"] = 2
-	vertices["square"] = 3
-	vertices["dodecagon"] = 1
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
 
-	fmt.Println(vertices)
+	//while loops
+	i := 0
+	for i < 5 {
+		fmt.Println(i)
+		i++
+	}
 
-	//to delete any key
-	delete(vertices, "square")
-	fmt.Println(vertices)
+	//looping arrays
+	arr := []string{"a", "b", "c"}
+	for index, value := range arr {
+		fmt.Println("index", index, "value", value)
+	}
+
+	//same goes for map just replace index with key
 }

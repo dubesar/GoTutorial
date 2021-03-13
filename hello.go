@@ -1,29 +1,13 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-	"math"
-)
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
 
 func main() {
-	result := sum(2, 3)
-	fmt.Println(result)
-	res, err := sqrt(-16)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println(res)
-	}
-}
-
-func sum(x int, y int) int {
-	return x + y
-}
-
-func sqrt(x float64) (float64, error) {
-	if x < 0 {
-		return 0, errors.New("Undefined for negative numbers")
-	}
-	return math.Sqrt(x), nil
+	p := person{name: "Jake", age: 23}
+	fmt.Println(p.age)
 }

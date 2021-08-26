@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	sampleMap = map[string]int{
+	sampleMap := map[string]int{
 		"James": 50,
 		"Ali":   39,
 	}

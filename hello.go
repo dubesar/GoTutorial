@@ -6,13 +6,14 @@ import (
 )
 
 //searching element
+//go doesnt provide any package for searching
 func indexOf(data []int, ele int) int {
-	for index, value := range data {
-		if ele == value {
-			return index
-		}
+     for index, value := range data {
+	if ele == value {
+	    return index
 	}
-	return -1
+     }
+     return -1
 }
 
 func main() {

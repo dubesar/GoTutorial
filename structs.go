@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type person struct {
-	firstName string `json:"firstName" yaml:"firstName"` // Tagging can be added for serialization
+	FirstName string `json:"firstName" yaml:"firstName"` // Tagging can be added for serialization
 	lastName  string
 	age       int
 }
@@ -11,7 +11,7 @@ type person struct {
 func main() {
 	//Assigning values to the fields in the person struct:
 	p1 := person{
-		firstName: "Carl",
+		FirstName: "Carl",
 		lastName:  "Eschenbach",
 		age:       54,
 	}

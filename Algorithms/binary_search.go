@@ -1,24 +1,17 @@
 package main
 
 import "fmt"
-func binarySearch(target int, arr []int) bool {
-	low := 0
-	high := len(arr) - 1
-
-	for low <= high{
-		mid := (low + high) / 2
-
-		if arr[mid] < target {
-			low = mid + 1
-		}else if arr[mid]==target{
-		    return true
-		}else{ 
-			high = mid - 1
-		}
-	}
-	return false
+func BubbleSort(arr[] int)[]int {
+   for i:=0; i< len(arr)-1; i++ {
+      for j:=0; j < len(arr)-i-1; j++ {
+         if (arr[j] > arr[j+1]) {
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+         }
+      }
+   }
+   return arr
 }
 func main() {
-	items := []int{1,2, 9, 20, 31, 45, 63, 70, 100}
-	fmt.Println(binarySearch(31, items))
+   arr:= []int{11, 14, 3, 8, 18, 17, 43};
+   fmt.Println(BubbleSort(arr))
 }

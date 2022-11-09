@@ -4,6 +4,8 @@ Learn Go.
 This repository contains code samples to help you learn Golang easily.
 Give a ⭐️ to the repo and contribute
 
+https://gobyexample.com/
+
 # Snippets
 Some Short snippets for revision. Look in the files inside repo for full code and better examples.
 ## Basic I/O
